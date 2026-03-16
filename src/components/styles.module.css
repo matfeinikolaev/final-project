@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+.link {
+  background-color: #dadada;
+  padding: 10px 20px;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+}
+.linkActive {
+  background-color: #171717;
+  color: #d0d0d0;
+}
