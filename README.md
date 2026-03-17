@@ -1,16 +1,52 @@
-# React + Vite
+# Stock Market Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для просмотра данных фондового рынка через [Marketstack API](https://marketstack.com/).
 
-Currently, two official plugins are available:
+## Функциональность
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Биржи** — список мировых бирж с поиском по названию, акрониму и стране
+- **Тикеры** — список тикеров с фильтрацией по бирже и поиском
+- **EOD** — исторические данные (End-of-Day) по выбранным тикерам
+- **Избранное** — сохранение акций в избранное с сохранением в LocalStorage
 
-## React Compiler
+## Технологии
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Технология | Назначение |
+|---|---|
+| React 19 | UI-фреймворк |
+| React Router 7 | Маршрутизация |
+| Redux Toolkit | Стейт-менеджер |
+| Material UI 7 | UI-библиотека |
+| Storybook 8 | UI-kit |
+| Vite | Сборщик |
+| ESLint + Prettier | Линтинг и форматирование |
 
-## Expanding the ESLint configuration
+## Запуск
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Установить зависимости
+npm install
+
+# Запустить dev-сервер
+npm run dev
+
+# Запустить Storybook
+npm run storybook
+
+# Форматировать код
+npm run format
+```
+
+## Переменные окружения
+
+Создайте файл `.env` в корне проекта:
+
+```
+VITE_MARKETSTACK_API_KEY=your_api_key_here
+```
+
+Получить ключ можно на [marketstack.com](https://marketstack.com/).
+
+## Деплой
+
+Проект задеплоен на GitHub Pages.

@@ -1,17 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = []
+const loadFromStorage = () => {
+  try {
+    const saved = localStorage.getItem('favorites')
+    return saved ? JSON.parse(saved) : []
+  } catch {
+    return []
+  }
+}
 
 export const favoritesSlice = createSlice({
   name: 'favorites',
-  initialState,
+  initialState: loadFromStorage(),
   reducers: {
     addToFavorites: (state, action) => {
       state.push(action.payload)
     },
     removeFromFavorites: (state, action) => {
-      const data = state.filter((el) => el.id !== action.payload)
-      return [...data]
+      state.splice(action.payload, 1)
     },
   },
 })

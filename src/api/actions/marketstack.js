@@ -16,12 +16,13 @@ export const getEOD = async (symbols = '') => {
 }
 
 export const getTickers = async (exchange = '') => {
+  console.log(exchange)
   const init = {
     method: 'GET',
     headers: API_HEADERS,
   }
   const data = await getApiResource(
-    `${API_BASE_URL}/tickers?access_key=${VITE_MARKETSTACK_API_KEY}&exchange=${exchange}`,
+    `${API_BASE_URL}/tickers?access_key=${VITE_MARKETSTACK_API_KEY}&exchange=${Array.isArray(exchange) ? exchange.join(',') : exchange}`,
     init,
   )
 
