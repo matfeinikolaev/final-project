@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router'
+import { createHashRouter } from 'react-router'
 
 import App from './containers/App'
 import Tickers from './containers/Tickers'
@@ -7,7 +7,7 @@ import EOD from './containers/EOD'
 import Exchanges from './containers/Exchanges'
 import Favorites from './containers/Favorites'
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     Component: App,
