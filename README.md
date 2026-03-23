@@ -50,3 +50,5 @@ VITE_MARKETSTACK_API_KEY=your_api_key_here
 ## Деплой
 
 Проект задеплоен на GitHub Pages.
+
+Ссылка на проект: https://matfeinikolaev.github.io/final-project/#/
